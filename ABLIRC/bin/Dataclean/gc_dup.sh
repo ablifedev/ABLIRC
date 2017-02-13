@@ -1,0 +1,1 @@
+cat "$1"_fastqc/fastqc_data.txt | perl -ne 'chomp;if($_=~/Filename\s*(\S+)\.fq/){$name=$1;}if($_=~/\%GC\s*(\S+)/){$gc=$1;}if($_=~/\#Total Duplicate Percentage\s*(\S+)/){$dup=$1;$dup=sprintf("%.2f",$dup);}END{print $name,"\t",$gc,"\t",$dup,"\n";}' > "$1"_gc_dup

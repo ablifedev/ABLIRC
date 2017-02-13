@@ -1,0 +1,391 @@
+        
+[[ablife:config]]
+Title	
+Title	CLIP-seq
+
+Species	mm
+
+Institutions	  
+Reportdate	
+
+
+fujian	Supplements
+public	assets/public
+       
+[[ablife:timepoint]]
+
+
+
+
+
+[[ablife:content]]
+
+# Part Ⅰ CLIP-seq Data analysis Process
+
+
+
+[ablife:img]<public>/CLIP-seq_workflow_v2.2.png|||Figure 1.1．CLIP-seq workflow||||||7
+
+[ablife:newpage]
+
+
+
+# Part Ⅱ CLIP-seq Data Clean
+
+
+
+## 2.1 Method Description
+
+
+Clean reads refers to the effective reads which removed the adapter and low-quality base.
+
+**Description of the clean reads extraction policy:**
+
+**1-end clean policy:**
+
+1. Cut off the adapter, cut off the front 3 bases, and retain the length of 16 or more reads;
+
+2. Remove the quality of less than 20 bases, retain the length of 16 or more reads;
+
+3. Remove the 30% base reads below 20 reads;
+
+4. discard NN,discard polyG, Keeps reads of length 16 or longer;
+
+**2-end clean policy:**
+
+1. Cut off the adapter, cut off the end of the three bases, and retain the length of more than 16 reads;
+
+2. Remove the quality of less than 20 bases, to retain the length of 16 or more reads;
+
+3. Remove the 30% of the base quality of less than 20 reads;
+
+4. discard NN,discard polyG, Keeps reads of length 16 or longer.
+
+[ablife:newpage]
+
+**Results:**
+
+[ablife:table]<fujian>/Sup1_Clean/Obtain_the_high_quality_clean_reads.xls|||Table2.2 Obtain the high-quality clean reads||||||12
+
+**Description**
+
+Sample:Name of the experimental sample;
+
+Raw:raw reads, the number of original sequences transformed from the original base data by the sequencing;
+
+clean:clean reads, the number of valid sequences used for subsequent analysis after the raw reads were removed from the linker sequence and the low quality base;
+
+clean per:Percent of clean reads in raw reads;
+
+unique tag:Percent of Non-repetitive reads in clean reads;
+
+[ablife:newpage]
+
+# Part Ⅲ CLIP-seq Project Results - Basic Analysis
+
+## 3.1 CLIP-seq Data Quality Analysis
+
+### 3.1.1 Clean reads base quality analysis
+
+**Method Description:**
+
+Note: Sequencing quality distribution:
+
+y-axis represents the sequencing quality score , it was calculated through the following formula :
+
+[ablife:img]<public>/Quality score formula.png|||Figure3.1 sequencing quality score formula|||aaa|||8
+
+Where p is the probability that the corresponding base call is incorrect, x-axis represents each position of the read(bp), when the Q=30,the p=0.001
+
+Sequence content distribution:
+
+y-axis represents the percentage of each kind of nucleotide, x-axis represents each position of the read(bp)
+
+[ablife:newpage]
+
+**Results:**
+
+[ablife:imggroup]<fujian>/Sup2_Quality_control|||per_base_quality|||10|||5
+
+[ablife:newpage]
+
+### 3.1.2 GC content analysis
+
+**Method Description:**
+
+
+Evaluate the distribution of the four kind of bases' percent from the sequencing reads.
+
+**Results:**
+
+[ablife:imggroup]<fujian>/Sup2_Quality_control|||per_base_sequence_content|||10|||5
+
+[ablife:newpage]
+
+### 3.1.3 Effective length statistics
+
+**Method Description:**
+
+
+After removing the index sequence, building a library with random bases and truncating the low-quality base, we used the obtained clean reads for the effective length analysis.
+
+**Results:**
+
+[ablife:imggroup]<fujian>/Sup2_Quality_control|||sequence_length_distribution|||10|||5
+
+[ablife:newpage]
+
+### 3.1.4 Representative Analysis of cDNA Library
+
+**Method Description:**
+
+
+If the PCR amplification is excessive, the library will contain a large number of duplicate reads. In order to ensure that the library better represents the abundance of the original DNA, the company in the database on the PCR amplification cycle has strict control.
+
+PCR duplication level Calculated as follows: from the sequencing data were randomly selected 200 000 reads as Total Reads, according to the following formula:
+<center>
+
+**PCR duplication level=Duplication Reads/Total Reads**
+
+</center>
+
+**Results:**
+
+[ablife:imggroup]<fujian>/Sup2_Quality_control|||duplication_levels|||10|||5
+
+[ablife:newpage]
+
+## 3.2 Whole genome location analysis
+
+### 3.2.1 Reference to genomic information
+
+[ablife:table]<fujian>/Sup0_Reference_genome/Length_distribution_across_Genomic_Regions.xls|||Table3.1.Length distribution across genomic regions||||||8
+
+[ablife:img]<fujian>/Sup0_Reference_genome/Length_distribution_across_Genomic_Regions_Bar.png|||Figure3.2 Length distribution across genomic regions||||||7
+
+**Description**
+
+CDS:The total number of bases in the coding region, and the proportion in the genome;
+
+five_prime_UTR:5'untranslated region, and the proportion in the genome;
+
+Intergenic:The total number of bases in the intergenic region, and the proportion in the genome;
+
+Introns:The total number of bases in the intron region, and the proportion in the genome;
+
+noncoding_exon:The total number of bases in the non-coding RNA exon region, and the proportion in the genome;
+
+three_prime_UTR:The total number of bases in the 3'untranslated region, and the proportion in the genome.
+
+[ablife:newpage]
+
+### 3.2.2 Reads aligned to the reference genome.
+
+**Method Description:**
+
+In this part of the analysis, we compare valid clean reads to the reference genome.
+
+**Results:**
+
+[ablife:table]<fujian>/Sup3_Mapping/Mapping_of_clean_reads_on_the_reference_genome.txt|||Table3.2 Mapping of clean reads on the reference genome||||||12
+
+**Description**
+
+input data:clean reads, the number of reads after the sequence is filtered;
+
+total mapped reads:The number of sequencing sequences that can be located on the genome is counted;
+
+uniq mapped reads:The number of unique reads in the reference genome and the proportion of total mapped reads, the vast majority of single-position reads from the mature mRNA;
+
+multiple mapped reads:The number of reads in the reference genome and the proportion of the total mapped reads were the most significant.
+
+rmdup reads:remove duplicate reads, Remove the duplication of PCR reads, that is, all repeat reads only count the total number of reads after the statistics, and its proportion of uniq mapped reads;
+
+splice reads:Segment alignment compares the sequencing sequences (also called Junction reads) to the two exons;
+
+nonsplice reads:Whole sequence alignment to the exon of the sequencing sequence statistics;
+
+antisense reads:Compare to the reads on the antisense strand.
+
+[ablife:newpage]
+
+### 3.2.3 Distribution of reads in different regions of the genome
+
+**Method Description:**
+
+The clean reads were compared to the reference genome, and the distribution of each region was statistically analyzed. The statistical results were as follows:
+
+**Results:**
+
+[ablife:table]<fujian>/Sup3_Mapping/Reads_distribution_across_reference_Genomic_Regions.txt|||Table3.3 Reads distribution across reference genomic regions||||||10
+
+[ablife:imggroup]<fujian>/Sup3_Mapping|||Mapping_distribution|||10|||5
+
+[ablife:newpage]
+
+### 3.2.4 Genome Coverage and Character Analysis
+
+**Method Description:**
+
+
+CLIP-seq reads With the length of the transcription unit coverage intensity analysis, to the transcription initiation site and transcription termination sites as the standard, the cDNA was divided into 100 copies, each called a bin, to fall in each bin Of the average of the reads, resulting in the overall reads coverage per bin.
+
+**Results:**
+
+[ablife:imggroup]<fujian>/Sup3_Mapping|||randCheck_mRNA|||10|||5
+
+**Method Description:**
+
+
+The average of the gene is divided into 100 copies, each known as a bin, seeking to fall in each bin in the average of the sum of reads, resulting in the overall bin coverage of each bin coverage.
+
+**Results:**
+
+[ablife:imggroup]<fujian>/Sup3_Mapping|||randCheck_gene|||10|||5
+
+[ablife:newpage]
+
+### 3.2.5 Reads the distribution at the transcriptional start site, the transcription termination site, the start codon, and the stop codon
+
+**Method Description:**
+
+Transcription start site / transcription termination site, translation initiation codon / stop codon as the origin, statistics of the upstream and downstream 1kb range reads the distribution of the situation.
+
+**Results:**
+
+[ablife:imggroup]<fujian>/Sup3_Mapping|||distance2_tsstts_reads_density|||10|||5
+
+[ablife:imggroup]<fujian>/Sup3_Mapping|||distance2codon_reads_density|||10|||5
+
+[ablife:newpage]
+
+### 3.2.6 Sample correlation analysis 
+
+**Method Description:**
+
+Calculate the RPKM value for each gene by comparing the number of reads in each gene, and then comparing the RPKM values of the same gene in the two samples to get the correlation between the two samples.In the IP project, if the experiment and the control The high coefficient of correlation between the samples indicates that most of the reads in the two samples are similar in distribution on the chromosome, implying that the RNA / DNA pool of the sample is low and the enrichment and specificity are low.
+
+**Results:**
+
+[ablife:imggroup]<fujian>/Sup4_Correlation|||lm|||10|||5
+
+[ablife:newpage]
+
+### 3.2.7 sample cluster analysis
+
+**Method Description:**
+
+In this part of the analysis, clustering analysis of samples was conducted according to the sample correlation coefficient.
+
+**Results:**
+
+[ablife:table]<fujian>/Sup4_Correlation/Sample_correlation.xls|||Table3.4 Sample Correlation||||||10
+
+[ablife:img]<fujian>/Sup4_Correlation/Sample_correlation.png|||Sample_correlation||||||8|||5
+
+[ablife:newpage]
+
+# Part Ⅳ Combine peaks analysis
+
+## 4.1 Combine peaks analysis strategy
+
+**Method Description:**
+
+Since the amount of each gene is different, the number of CLIP-seq sequences located at one position in the genome can not assess whether the RNA-binding protein specifically binds at that position. How to eliminate the specific binding of the gene expression to the RNA-binding protein MIT's Phillip A Sharp (obtained Nobel Prize for discovery of gene splicing) in a paper in 2009 using the exon array transcript abundance as a reference, (Chi, Zang et al., 2009). The theoretical basis for this is that the expression of the AGO2 protein specifically binds to the mRNA,
+MRNA with low transcript abundance is less likely to be caught by RNA-binding proteins in the IP process, and vice versa.
+Method :ABLife
+
+[ablife:img]<public>/peak_calling.jpg|||Figure4.1 Peak calling||||||7
+
+
+[ablife:newpage]
+
+## 4.2 Peak statistics
+
+**Method Description:**
+
+In this project, we use Peak Calling method to test the rmdup reads of the samples with the background of IgG samples, and get the specific peaks of the samples. The results are as follows:
+
+**Results:**
+
+[ablife:table]<fujian>/Sup5_Peak_and_peak_gene/peak_statics.xls|||Table4.2 Peak Number||||||10
+
+**Description**
+
+group:IP test group number;
+
+method:Peak detection method;
+
+rmdup reads:Remove duplicate reads, remove the number of reads after PCR duplication;
+
+peak number:The number of peaks detected in the sample;
+
+peak reads number:The number of peak can be detected in the experimental sample.
+
+gene number:The number of genes associated with the peak detected in the experimental sample.
+
+[ablife:newpage]
+
+## 4.3 Peak width statistics
+
+**Method Description:**
+
+The width of the peak specific to the test sample was counted, and the results were as follows:
+
+**Results:**
+
+[ablife:imggroup]<fujian>/Sup5_Peak_and_peak_gene/ablife|||peak_width|||10|||5
+
+[ablife:newpage]
+
+## 4.4 The distribution of binding peaks on the reference genome
+
+**Method Description:**
+
+The distribution of binding peaks in each region of the reference genome was statistically analyzed. The results were as follows:
+
+**Results:**
+
+[ablife:table]<fujian>/Sup5_Peak_and_peak_gene/ablife/peak_mapping_distribution.txt|||Table4.3 Peak distribution across reference genomic regions||||||10
+
+[ablife:imggroup]<fujian>/Sup5_Peak_and_peak_gene/ablife|||peak_Mapping_distribution_Bar||||||5
+
+
+[ablife:newpage]
+
+## 4.5 Peak overlap analysis
+
+**Method Description:**
+
+The Venn diagram mainly shows the number of overlapping peaks between the ablife analysis methods for the two replicates.
+
+**Results:**
+
+[ablife:img]<fujian>/Sup5_Peak_and_peak_gene/overlap/Venn.png|||Venn||||||6
+
+**Description**
+
+olp peak:There are overlapping peaks between the two experiments, and the number of overlapping peaks detected between the two experiments is not the same because of the overlap or inclusion of the positions of the peaks;
+
+merged olp peak:The clusters with overlapping peaks are clustered and the overlapping peaks are classified into the same cluster. The number of clusters with overlapping peaks is less than the number of overlapping peaks detected by each experiment;
+
+specific peak:The number of peaks that do not overlap between the two experiments;
+
+specific gene:The number of genes associated with the non-overlapping peaks between the two replicates;
+
+olp gene:There were peak detected genes between the two experiments. The peaks of the detected peaks could be overlapped or non-overlapping. The number of olp genes was more than the number of olp peaks, and contein merged olp peaks and specific peaks.
+
+[ablife:newpage]
+
+## 4.6 Binding motif analysis
+
+**Method Description:**
+
+We used a HOMER (Hypergeometric Optimization of Motif EnRichment) to perform a motif analysis of the binding peaks specific to the test sample.
+
+**Results:**
+
+[ablife:linkgroup]<fujian>/Sup6_Motif_results/ablife|||homerResults.html|||homerResults[link]
+
+[ablife:newpage]
+

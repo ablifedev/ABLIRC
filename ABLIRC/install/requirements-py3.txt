@@ -1,0 +1,8 @@
+# Cython 0.16 is required... 0.17 has issues with Python 2.7 building
+# 2013-10-18 mbreese - Looks like it is okay now...
+# cython==0.16
+
+pygraphviz
+colorama
+gffutils
+cutadapt

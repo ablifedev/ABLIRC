@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20001102//EN" "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd">
+
+<svg width="825.697391304348" height="624.034782608696" viewBox="0 0 825.697391304348 600.556521739131">
+<Author>Li Shengting</Author>
+<E-mail>lishengting@genomics.org.cn</E-mail>
+<Version>4.75</Version>
+<Drawer>xubl@cluster.hpc.org</Drawer>
+<Date>Thu Jun 17 15:28:45 2010</Date>
+	<g transform="scale(1)" xml:space="preserve">
+		<g transform="translate(120.274086956522,64.1565217391304)">
+			<rect width="50.000000" height="358.305000" style="fill:orange;stroke:none;stroke-width:3" x="0.000000" y="91.695000" onclick="alert('x:0\ny:238.87')" onmousemove="window.status='x:0\ty:238.87'" />
+			<rect width="100.000000" height="112.605000" style="fill:orange;stroke:none;stroke-width:3" x="50.000000" y="337.395000" onclick="alert('x:1\ny:75.07')" onmousemove="window.status='x:1\ty:75.07'" />
+			<rect width="100.000000" height="55.110000" style="fill:orange;stroke:none;stroke-width:3" x="150.000000" y="394.890000" onclick="alert('x:2\ny:36.74')" onmousemove="window.status='x:2\ty:36.74'" />
+			<rect width="100.000000" height="40.110000" style="fill:orange;stroke:none;stroke-width:3" x="250.000000" y="409.890000" onclick="alert('x:3\ny:26.74')" onmousemove="window.status='x:3\ty:26.74'" />
+			<rect width="100.000000" height="25.110000" style="fill:orange;stroke:none;stroke-width:3" x="350.000000" y="424.890000" onclick="alert('x:4\ny:16.74')" onmousemove="window.status='x:4\ty:16.74'" />
+			<rect width="100.000000" height="10.110000" style="fill:orange;stroke:none;stroke-width:3" x="450.000000" y="439.890000" onclick="alert('x:5\ny:6.74')" onmousemove="window.status='x:5\ty:6.74'" />
+			<rect width="80.000000" height="183.180000" style="fill:red;stroke:none;stroke-width:3" x="0.000000" y="266.820000" onclick="alert('x:0.3\ny:122.12')" onmousemove="window.status='x:0.3\ty:122.12'" />
+			<rect width="100.000000" height="56.490000" style="fill:red;stroke:none;stroke-width:3" x="80.000000" y="393.510000" onclick="alert('x:1.3\ny:37.66')" onmousemove="window.status='x:1.3\ty:37.66'" />
+			<rect width="100.000000" height="27.750000" style="fill:red;stroke:none;stroke-width:3" x="180.000000" y="422.250000" onclick="alert('x:2.3\ny:18.5')" onmousemove="window.status='x:2.3\ty:18.5'" />
+			<g transform="translate(407.656,6.56521739130435) scale(0.6)">
+				<text x="49.248" y="36" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00">Genome Insertion</text>
+				<rect width="27" height="27" style="fill:orange;stroke:none;stroke-width:3" x="11.715652173913" y="12.3260869565217" />
+				<text x="49.248" y="72" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00">Genome Deletion</text>
+				<rect width="27" height="27" style="fill:red;stroke:none;stroke-width:3" x="11.715652173913" y="48.3260869565217" />
+			</g>
+			<text x="-21.0464347826087" y="463.304347826087" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00">0</text>
+			<line x1="0" y1="450.000000" x2="5" y2="450.000000" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<text x="-53.8784347826087" y="313.304347826087" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00">100</text>
+			<line x1="0" y1="300.000000" x2="5" y2="300.000000" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<text x="-53.8784347826087" y="163.304347826087" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00">200</text>
+			<line x1="0" y1="150.000000" x2="5" y2="150.000000" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<text x="-53.8784347826087" y="13.304347826087" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00">300</text>
+			<line x1="0" y1="0.000000" x2="5" y2="0.000000" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<text x="604.630434782609" y="463.304347826087" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00">0</text>
+			<line x1="600" y1="450.000000" x2="595" y2="450.000000" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<text x="604.630434782609" y="313.304347826087" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00">25</text>
+			<line x1="600" y1="300.000000" x2="595" y2="300.000000" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<text x="604.630434782609" y="163.304347826087" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00">50</text>
+			<line x1="600" y1="150.000000" x2="595" y2="150.000000" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<text x="604.630434782609" y="13.304347826087" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00">75</text>
+			<line x1="600" y1="0.000000" x2="595" y2="0.000000" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<text x="41.792" y="490.630434782609" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00">0</text>
+			<line x1="0" y1="450" x2="0" y2="445" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<line x1="0" y1="0" x2="0" y2="5" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<text x="141.792" y="490.630434782609" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00">1</text>
+			<line x1="100" y1="450" x2="100" y2="445" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<line x1="100" y1="0" x2="100" y2="5" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<text x="241.792" y="490.630434782609" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00">2</text>
+			<line x1="200" y1="450" x2="200" y2="445" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<line x1="200" y1="0" x2="200" y2="5" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<text x="341.792" y="490.630434782609" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00">3</text>
+			<line x1="300" y1="450" x2="300" y2="445" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<line x1="300" y1="0" x2="300" y2="5" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<text x="441.792" y="490.630434782609" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00">4</text>
+			<line x1="400" y1="450" x2="400" y2="445" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<line x1="400" y1="0" x2="400" y2="5" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<text x="541.792" y="490.630434782609" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00">5</text>
+			<line x1="500" y1="450" x2="500" y2="445" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<line x1="500" y1="0" x2="500" y2="5" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<text x="641.792" y="490.630434782609" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00">6</text>
+			<line x1="600" y1="450" x2="600" y2="445" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<line x1="600" y1="0" x2="600" y2="5" style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round" />
+			<rect width="600" height="450" style="fill:none;stroke:black;stroke-width:3" x="0" y="0" />
+		</g>
+		<text x="-131.67" y="36" transform="translate(19.504347826087,289.15652173913) rotate(-90)" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00"># in Genome[1e+2]</text>
+		<text x="324.316086956522" y="589.847826086957" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00">Indel Size[bp]</text>
+		<text x="247.222086956522" y="44.5" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00">Distribution of Indel Size</text>
+		<text x="-103.77" y="36" transform="translate(757.671304347826,289.15652173913) rotate(-90)" style="fill:#000000;font-family:ArialNarrow-Bold;font-size:36.00"># in CDS[1e+1]</text>
+	</g>
+</svg>

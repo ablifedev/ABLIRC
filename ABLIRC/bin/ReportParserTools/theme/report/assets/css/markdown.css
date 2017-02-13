@@ -1,0 +1,136 @@
+#container {
+    overflow: hidden;
+    /*font-family: "Helvetica Neue", Helvetica,Georgia,"Time New Roman","  ";*/
+    font-family: Georgia,"Time New Roman","  ";
+    font-size: 16px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    padding-bottom: 30px;
+}
+
+.table {
+    font-family: "Helvetica Neue", Helvetica,Georgia,"Time New Roman","  ";
+}
+
+/*#container > *:first-child {
+    margin-top: 0 !important;
+}*/
+
+#container > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+#container a:not([href]) {
+    color: inherit;
+    text-decoration: none;
+}
+
+#container .absent {
+    color: #c00;
+}
+
+#container .anchor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    padding-right: 6px;
+    padding-left: 30px;
+    margin-left: -30px;
+}
+
+#container .anchor:focus {
+    outline: none;
+}
+
+#container h1, #container h2, #container h3, #container h4, #container h5, #container h6 {
+    font-family: "lucida grande","lucida sans unicode",lucida,helvetica,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei","    ",sans-serif;
+    position: relative;
+    margin-top: 1em;
+    margin-bottom: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+#container h1 .octicon-link, #container h2 .octicon-link, #container h3 .octicon-link, #container h4 .octicon-link, #container h5 .octicon-link, #container h6 .octicon-link {
+    display: none;
+    color: #000;
+    vertical-align: middle;
+}
+
+#container h1:hover .anchor, #container h2:hover .anchor, #container h3:hover .anchor, #container h4:hover .anchor, #container h5:hover .anchor, #container h6:hover .anchor {
+    padding-left: 8px;
+    margin-left: -30px;
+    text-decoration: none;
+}
+
+#container h1:hover .anchor .octicon-link, #container h2:hover .anchor .octicon-link, #container h3:hover .anchor .octicon-link, #container h4:hover .anchor .octicon-link, #container h5:hover .anchor .octicon-link, #container h6:hover .anchor .octicon-link {
+    display: inline-block;
+}
+
+#container h1 tt, #container h1 code, #container h2 tt, #container h2 code, #container h3 tt, #container h3 code, #container h4 tt, #container h4 code, #container h5 tt, #container h5 code, #container h6 tt, #container h6 code {
+    font-size: inherit;
+}
+
+#container h1 {
+    padding-bottom: 0.3em;
+    font-size: 2em;
+    line-height: 1.2;
+    /*border-bottom: 1px solid #eee;*/
+}
+
+#container h1 .anchor {
+    line-height: 1;
+}
+
+#container h2 {
+    padding-bottom: 0.3em;
+    font-size: 1.7em;
+    line-height: 1.225;
+    /*border-bottom: 1px solid #eee;*/
+}
+
+#container h2 .anchor {
+    line-height: 1;
+}
+
+#container h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+
+#container h3 .anchor {
+    line-height: 1.2;
+}
+
+#container h4 {
+    font-size: 1.25em;
+}
+
+#container h4 .anchor {
+    line-height: 1.2;
+}
+
+#container h5 {
+    font-size: 1em;
+}
+
+#container h5 .anchor {
+    line-height: 1.1;
+}
+
+#container h6 {
+    font-size: 1em;
+    color: #777;
+}
+
+#container h6 .anchor {
+    line-height: 1.1;
+}
+
+#container p, #container blockquote, #container ul, #container ol, #container dl, #container table, #container pre {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+
