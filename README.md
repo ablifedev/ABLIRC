@@ -4,7 +4,7 @@ ABLIRC is a workflow for peak-calling and analyzing CLIP-seq sequencing datasets
 
 ## Download
 
-Download current release: [ABLIRC-1.0.0](https://github.com/ablifedev/ABLIRC/archive/v0.1.tar.gz)
+Download current release: [ABLIRC-v0.1](https://github.com/ablifedev/ABLIRC/archive/v0.1.tar.gz)
 
 Download example data:    [ABLIRC-example-data](http://ablife.cc/ABLIRC/RELEASE/ABLIRC-example-data.tar.gz)
 
