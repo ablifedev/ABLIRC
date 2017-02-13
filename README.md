@@ -4,7 +4,7 @@ ABLIRC is a workflow for peak-calling and analyzing CLIP-seq sequencing datasets
 
 ## Download
 
-Download current release: [ABLIRC-1.0.0](http://ablife.cc/ABLIRC/RELEASE/ABLIRC.tar.gz)
+Download current release: [ABLIRC-1.0.0](https://github.com/ablifedev/ABLIRC/archive/v0.1.tar.gz)
 
 Download example data:    [ABLIRC-example-data](http://ablife.cc/ABLIRC/RELEASE/ABLIRC-example-data.tar.gz)
 
@@ -31,6 +31,8 @@ Required software:
 * TopHat2 (>=2.0.13, http://ccb.jhu.edu/software/tophat/index.shtml)
 
 * FASTX-Toolkit (>=0.013, http://hannonlab.cshl.edu/fastx_toolkit/)
+
+* graphviz (http://www.graphviz.org/Download..php)
 
 Required R packages:
 
