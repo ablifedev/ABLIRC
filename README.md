@@ -120,8 +120,8 @@ Run the ABLIRC : Make sure the `runPipe` in you path configure or you can use ab
 
 ## Test data
 
-In the example/test_reads folder, there are two clipseq data, ‘hek_100W’ is the clipseq-data, and the other is the noisy RNA-seq as a background, both of them are from Human Embryonic Kidney 293 cells, containing 1 million reads of each, you could test the ABLIRC with them.  
-In the example/report folder, there is a complete output of the ABLIRC program, it can be used as a reference after the program is run.  
+In the `example/test_reads/`, there are two clipseq data, ‘hek_100W’ is the clipseq-data, and the other is the noisy RNA-seq as a background, both of them are from Human Embryonic Kidney 293 cells, containing 1 million reads of each, you could test the ABLIRC with them.  
+In the `example/report/`, there is a complete output of the ABLIRC program, it can be used as a reference after the program is run.  
 
 ## Config file template
 
