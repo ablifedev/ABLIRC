@@ -54,6 +54,15 @@ Required R packages:
 
 * Grid  
 
+Required Perl packages:
+
+* Bio::DB::Sam  
+
+* GD::Simple  
+
+* GD  
+
+* YAML::XS 
 
 After all of the requirments being installed, you can install the program as followed:   
 
