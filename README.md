@@ -78,9 +78,9 @@ Copy the configuration file `clipseq.config.sample` to you workdir:
 	`cp clipseq.config.sample <workdir>` 
 	
 2. Step2:  
-Fill in the ‘Genome_db.xls’ file correctly. The `Genome_db.xls` file contains the full path of the genome file to be used in the program, you must download the following required files and fill them in the corresponding columns. All the genomic-related documents can be downloaded from NCBI or UCSC:  
+Fill in the ‘genome_db.xls’ file correctly. The `Genome_db.xls` file contains the full path of the genome file to be used in the program, you must download the following required files and fill them in the corresponding columns. All the genomic-related documents can be downloaded from NCBI or UCSC:  
 	`cd ABLIRC/bin`  
-	`vi Genome_db.xls`
+	`vi genome_db.xls`
 	
 	* GenomeID: This ID is written in the configuration file and is used to identify which genome is used, and automatically read all the relevant files.
 	
