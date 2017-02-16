@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--   3 meta  *  *     ，       *  *    ！ -->
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>        </title>
+    <title>生命之美结题报告</title>
 <link rel="stylesheet" href="assets/css/jquery-ui.css">
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -39,7 +39,7 @@
 </head>
 
 <body>
-<div id="menubar" class="noprint"><a href="#modal" class="second" data-toggle="tooltip" data-placement="right" title="         "></a></div>
+<div id="menubar" class="noprint"><a href="#modal" class="second" data-toggle="tooltip" data-placement="right" title="点击展开或隐藏导航"></a></div>
 
 <div id="container" class="container">
 
@@ -53,23 +53,23 @@
             <hr class="hr0"/>
             <hr class="hr1"/>
         </div>
-        <div class="title1">    </div>
+        <div class="title1">结题报告</div>
         <div class="title2">[ablife:title]</div>
-        <div class="title3">        </div>
+        <div class="title3">技术委托服务项目</div>
         <div class="info">
-            <div><span class="info1">   （  ）：</span><span class="info2">[ablife:institutions]</span></div>
-            <div><span class="info1">   （  ）：</span><span class="info2">            </span></div>
-            <div><span class="info1">    ：</span><span class="info2">[ablife:reportdate]</span></div>
+            <div><span class="info1">委托方（甲方）：</span><span class="info2">[ablife:institutions]</span></div>
+            <div><span class="info1">受托方（乙方）：</span><span class="info2">武汉生命之美科技有限公司</span></div>
+            <div><span class="info1">报告日期：</span><span class="info2">[ablife:reportdate]</span></div>
         </div>
         <div style="height:150px">
         </div>
 <!--         <div class="timepoint">
-            <p class="timetitle">          ：</p>
+            <p class="timetitle">项目执行的重要时间点：</p>
             
             [ablife:timepoint]
             
         </div> -->
-        <div class="foot">            ，  ，  </div>
+        <div class="foot">武汉生命之美科技有限公司，武汉，中国</div>
 
         <div class="tb-block noprint">
             <div class="blblock"></div>
@@ -113,15 +113,15 @@
     </div>
     <div id="print" class="item">
         <a class="link icon_print"></a>
-        <a class="item_content">  </a>
+        <a class="item_content">打印</a>
     </div>
     <div id="expand" class="item">
         <a class="link icon_expand"></a>
-        <a class="item_content">  </a>
+        <a class="item_content">版式</a>
     </div>
     <div class="item">
         <a href="#modal" class="link icon_menu second"></a>
-        <a href="#modal" class="second item_content">  </a>
+        <a href="#modal" class="second item_content">导航</a>
     </div>
 </div>
 
@@ -162,14 +162,14 @@
 
 
 
-        //
+        //点击回到顶部的元素
         $("#gotop").click(function (e) {
-            // 1
+            //以1秒的间隔返回顶部
             $('body,html').animate({scrollTop: 0}, 300);
         });
 
         $("#print").click(function (e) {
-            // 1
+            //以1秒的间隔返回顶部
             $.pageslide.close();
             window.print();
         });

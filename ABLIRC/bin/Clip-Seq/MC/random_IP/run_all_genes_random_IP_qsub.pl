@@ -37,7 +37,7 @@ if(!defined($opts{gene_peak}) || !defined($opts{times}) || !defined($opts{outdir
 
 		-maxprc              max_process(200)       option
 
-		-f                   fdr           default is 0.001
+		-f                   fdr 阈值        default is 0.001
 
 	Usage End.
 

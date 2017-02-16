@@ -21,7 +21,7 @@
 #####################################################################################
 
 """
-  （  ）    ：      ，           （  ）
+文件（任务）切割模块：读入一个列表，按照列表个数来切割文件（任务）
 """
 
 
@@ -52,10 +52,10 @@ _version = 'v1.0'
 
 #-----------------------------------------------------------------------------------
 class SplitFiles():
-    """      ."""
+    """按行分割文件."""
 
     def __init__(self, file_name, line_count_list, line_per_job=2, temp_path='./'):
-        """                    """
+        """初始化要分割的源文件名和分割后的文件行数"""
         self.file_name = file_name
         self.line_count_list = line_count_list
         self.line_per_job = line_per_job
@@ -101,13 +101,13 @@ class SplitFiles():
             print("%s is not a validate file" % self.file_name)
 
     def get_part_file_name(self, part_num):
-        """"          ：                temp_part_file，               """
+        """"获取分割后的文件名称：在源文件相同目录下建立临时文件夹temp_part_file，然后将分割后的文件放到该路径下"""
         part_file_name = self.temp_path
         part_file_name += os.sep + "temp_file_" + str(part_num) + ".part"
         return part_file_name
 
     def write_file(self, part_num, *line_content):
-        """                   """
+        """将按行分割后的内容写入相应的分割文件中"""
         part_file_name = self.get_part_file_name(part_num)
         self.part_file_list.append(part_file_name)
         # print(line_content)

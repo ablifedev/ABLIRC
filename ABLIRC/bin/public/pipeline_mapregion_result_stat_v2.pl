@@ -33,9 +33,9 @@ if(!defined($opts{i}) || !defined($opts{p}) || !defined($opts{o}) )
 
     -p        postfix                     must be given
 
-    -m        match                                  ，default is "_Mapping_distribution.txt"
+    -m        match                       待统计文件包含的字符串，default is "_Mapping_distribution.txt"
 
-    -c        cutpostfix                  cutpostfix，-m      ，
+    -c        cutpostfix                  cutpostfix，-m指定的是后缀，需去除
 
     -o        outfile                     must be given
 
@@ -150,7 +150,7 @@ sub read_mapped_region{
 #	print Dumper %{$hash};
 }
 
-sub AbsolutePath{		#
+sub AbsolutePath{		#获取指定目录或文件的决定路径
 	my ($type,$input) = @_;
 	my $return;
 	if ($type eq 'dir'){

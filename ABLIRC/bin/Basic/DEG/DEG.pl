@@ -25,8 +25,8 @@ Writer: ChengChao <chaocheng@ablife.cc>
 
 Version: 1.0
 
-  ：  TCC     Differential expressed (Gene|miRNA|species)  ，
-       DEG   ：
+功能：利用TCC包进行各种Differential expressed (Gene|miRNA|species)分析，
+目前可以进行的DEG分析有：
 
 =head1 Usage
 

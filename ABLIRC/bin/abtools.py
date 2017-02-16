@@ -20,9 +20,9 @@
 #####################################################################################
 
 """
+程序功能说明
 
-
-
+流程说明
 """
 
 
@@ -68,7 +68,7 @@ _version = 'v1.0'
 
 
 def listToString(x):
-    """
+    """获得完整的命令
     """
     rVal = ''
     for a in x:
@@ -244,7 +244,7 @@ def main():
 
     if len(sys.argv) == 2 or "-h" in sys.argv:
         Thistool = modules_dict[sys.argv[1]]
-        print("\n  ：" + Thistool.__doc__ + "\n")
+        print("\n说明：" + Thistool.__doc__ + "\n")
         m = Thistool()
         m.print_help(scriptPath)
         sys.exit(1)

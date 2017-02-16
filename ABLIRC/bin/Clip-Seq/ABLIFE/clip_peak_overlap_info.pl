@@ -10,7 +10,7 @@ Author: Ablife
 
 Version: 1.0
 
-  bedtools cluster ablife,piranha,cims       peak  cluster ，       ，     peak  ，    cluster
+使用bedtools cluster将ablife,piranha,cims三种方法得到的peak进行cluster后，需对应回源文件，补充完整的peak信息，同时加入cluster信息
 
 =head1 Usage
 

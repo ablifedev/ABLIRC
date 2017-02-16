@@ -32,7 +32,7 @@ sub main_frame{
  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<head>
 
-		<title>fastqc  </title>
+		<title>fastqc报告</title>
 		<meta name="keywords" content="deep sequecing, HiSeq, mireap">
 		<meta name="description" content="Result display">
 
@@ -71,7 +71,7 @@ sub left_frame{
 	
 	<html>
 	<head>
-		<title>fastqc  </title>
+		<title>fastqc报告</title>
 		<meta name="keywords" content="sequecing, miRNA, genome">
 		<meta name="description" content="Result display">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF8">

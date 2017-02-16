@@ -31,9 +31,9 @@ if(!defined($opts{i}) || !defined($opts{p}) || !defined($opts{o}) )
 
     -i        indir(project directory)     must be given
 
-    -p        postfix
+    -p        postfix                     样品结果文件夹后缀
 
-    -m        match                              ，default is "_map_result"
+    -m        match                       待统计文件后缀，default is "_map_result"
 
     -o        outfile                     must be given
 

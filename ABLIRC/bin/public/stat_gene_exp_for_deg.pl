@@ -113,7 +113,7 @@ if($symbol!=0){
 	}
 }
 
-print OUT "\t\ta    gene     <br>    gene     \tb RPKM     1 gene <br> RPKM   0 gene   \n";
+print OUT "\t\ta 表达的gene数占总参考<br>基因组中gene总数的比例\tb RPKM值大于等于1的gene数<br>占RPKM值大于0的gene的比例\n";
 
 
 close OUT;

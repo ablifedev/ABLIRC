@@ -1,4 +1,4 @@
-q#!/usr/bin/perl -w
+#!/usr/bin/perl -w
 #
 my $ver = "1.0";
 

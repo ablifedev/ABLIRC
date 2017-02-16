@@ -2,19 +2,19 @@
 ####################################################################################
 ### Copyright (C) 2015-2019 by ABLIFE
 ####################################################################################
-#   ：
-#   ：
-#   ：Joseph Wei
-#     ：2015-8-7
-#     ：yaxunwei@ablife.cc
+# 名称：
+# 描述：
+# 作者：Joseph Wei
+# 创建时间：2015-8-7
+# 联系方式：yaxunwei@ablife.cc
 ####################################################################################
-###
+### 修改记录
 ####################################################################################
 # Date           Version       Author            ChangeLog
 #####################################################################################
 
 #####################################################################################
-#####
+#####参数获取
 #####################################################################################
 suppressPackageStartupMessages(library("optparse"))
 suppressPackageStartupMessages(library("stats"))
@@ -37,12 +37,12 @@ option_list <- list(
 	make_option(c("-o", "--outdir"),action = "store",type = "character",default = "./",
 		help = "The outdir")
 	)
-opt <- parse_args(OptionParser(option_list = option_list)) #####
+opt <- parse_args(OptionParser(option_list = option_list)) #####解释器
 
 setwd(opt$outdir)						####
 
 ###################################################################################
-####
+####加载包
 ###################################################################################
 library(ggplot2)
 library(reshape2)
@@ -88,7 +88,7 @@ library(grid)
 
 
 ##################################################################################
-#
+#数据处理
 data <- read.table(file= opt$file,header = F)#####	must with header
 colname <- colnames(data)
 dim_data <- dim(data)
@@ -132,13 +132,13 @@ ablife_theme_line <- function(base_size = 12){
 
 
 png(file=paste(opt$filename,'_peak_width.png',sep=''),pointsize=40,width=1000,height=600)
-ggplot(data)+ ####
-		geom_bar(aes(x = data[,1],y=data[,2],stat = "identity"),colour = "#0000FF",width =1,stat = "identity")+									#####
-		labs(title = opt$title,x="Peak Width",y= "Peak Number")+				#####     （  title，    title）
+ggplot(data)+ ####加载数据
+		geom_bar(aes(x = data[,1],y=data[,2],stat = "identity"),colour = "#0000FF",width =1,stat = "identity")+									#####基本作图函数
+		labs(title = opt$title,x="Peak Width",y= "Peak Number")+				#####坐标轴调整（图片title，横纵坐标title）
 		ablife_theme_line()+
-		# scale_y_continuous(limits=c(0,100))+									#####  y
-		geom_vline(aes( xintercept = Width),color = "#FF0000") + 							######    ，   X  xintercept
+		# scale_y_continuous(limits=c(0,100))+									#####指定y轴的范围
+		geom_vline(aes( xintercept = Width),color = "#FF0000") + 							######画垂直线，不是用X而是xintercept
 		annotate("text",x=Width,y=max(data[,2])/2,label = Label,size = 8,hjust = 0,colour= "#FF0000")
 		# geom_text(aes(x=Width,y=max(data[,2])/2,label=Label),size = 12,hjust = 0,colour = "#FF0000")+
 		# scale_colour_hue(name=sample)
-#scale_fill_discrete(name="Sample_name")	##           ，label，breaks
+#scale_fill_discrete(name="Sample_name")	##可以独立调整图例的名字，label，breaks

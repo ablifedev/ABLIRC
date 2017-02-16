@@ -1,0 +1,4 @@
+"#first line below is title,please do not delete or change it"							
+genomeid	species	genome	chrlen	gff	gffdb	geneanno	bowtie2_index
+human_gencode_v23	human	/data0/Genome/human/gencode/human.fa	/data0/Genome/human/gencode/GRCh38.p2_chrLen.txt	/data0/Genome/human/gencode_v23/basic/human_gencode_v23_basic.gff	/data0/Genome/human/gencode_v23/basic/human_gencode_v23_basic.db	/data0/Genome/human/gencode_v23/basic/human_anno.txt	/data0/Genome/human/gencode/bowtie2_index/human.fa
+mouse_gencode_vM4	mouse	/data0/Genome/mouse/gencode/GRCm38.p3.genome.fa	/data0/Genome/mouse/gencode/mouse_chrlen.txt	/data0/Genome/mouse/gencode/basic/mouse.gff	/data0/Genome/mouse/gencode/basic/mouse.db	/data0/Genome/mouse/gencode/basic/mouse_anno.txt	/data0/Genome/mouse/gencode/bowtie2_index/GRCm38.p3.genome.fa

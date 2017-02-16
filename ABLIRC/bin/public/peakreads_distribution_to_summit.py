@@ -21,7 +21,7 @@
 #####################################################################################
 
 """
-  peak reads   peak summit
+统计peak reads相对于peak summit的分布
 """
 
 
@@ -106,7 +106,7 @@ def configOpt():
 
 
 def listToString(x):
-    """
+    """获得完整的命令
     """
     rVal = ''
     for a in x:

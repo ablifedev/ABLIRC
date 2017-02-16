@@ -378,8 +378,8 @@ class Module:
 
     def print_help(self, src):
         print("-genomeid\tgenome id\n")
-        print("-sample[1,2,3,4...]\tsample  [sampleid:end1:end2]\n")
-        print("-list[1,2,3,4...]\t      [sample1,sample2:listname]\n")
+        print("-sample[1,2,3,4...]\tsample信息[sampleid:end1:end2]\n")
+        print("-list[1,2,3,4...]\t样品分组信息[sample1,sample2:listname]\n")
         self.config.gc["src"] = src
         self.init_input()
         self.init_output()
@@ -463,15 +463,15 @@ def callmotif(config, outdir, peakfa, type="clip"):
 
 def peakstat(config, outdir, peak, label, rmdupbam, type="clip_ablife"):
     """
-
-    1.peak mapping distribution statics， peaks  gene      ，   peak  gene。
-    2.    。
-    3.peak    。
+    功能
+    1.peak mapping distribution statics，对peaks按照gene区域进行分类，并输出peak所在gene。
+    2.添加注释。
+    3.peak长度统计。
     4.peak distribution relative2xxx
-    5.  peak reads
+    5.提取peak reads
     6.peak reads mapping distribution statics
-    7.peak reads    summit
-    8.  peak  ， callmotif  。
+    7.peak reads 相对于summit的分布图
+    8.提取peak序列，为callmotif准备。
     :param config:
     :param outdir:
     :param peak:

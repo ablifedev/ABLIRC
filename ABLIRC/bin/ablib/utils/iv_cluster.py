@@ -21,7 +21,7 @@
 #####################################################################################
 
 """
-
+汇总有用的工具函数
 """
 
 
@@ -60,14 +60,14 @@ _version = 'v1.0'
 
 # -----------------------------------------------------------------------------------
 class CTSS:
-    """ bam   ctss
+    """从bam中获取ctss信息的类
 
     """
 
     def __init__(self, file, iv=None, only5=False, only3=False):
         """
         :param file:
-        :param cluster_dis: cluster iv     ，iv              cluster
+        :param cluster_dis: cluster内iv的最大间距，iv间距大于该值则会被认为是两个cluster
         :param iv:
         :param only5:
         :param only3:
@@ -114,14 +114,14 @@ class CTSS:
 
 
 class IVcluster:
-    """     config
+    """分析流程中config文件的处理类
 
     """
 
     def __init__(self, file, cluster_dis=0, iv=None, only5=False, only3=False):
         """
         :param file:
-        :param cluster_dis: cluster iv     ，iv              cluster
+        :param cluster_dis: cluster内iv的最大间距，iv间距大于该值则会被认为是两个cluster
         :param iv:
         :param only5:
         :param only3:

@@ -21,11 +21,11 @@
 #####################################################################################
 
 """
-      ：
-1.         overlap peaks
-      ：
-  HTSeq   GenomicArrayOfSets       peaks，       peaks，  peak   interval
-     peak    ，   。
+程序功能说明：
+1.将实验组与对照组非overlap的peaks挑选出来
+程序设计思路：
+利用HTSeq模块的GenomicArrayOfSets来记录对照组的peaks，然后遍历实验组peaks，如果peak所在的interval
+有对照组的peak部分存在，则跳过。
 """
 
 
@@ -63,10 +63,10 @@ def configOpt():
     ##basic options
     p.add_option(
         '-e', '--exp', dest='exp', action='store',
-        type='string', help='   peaks  ，       peak ：   ，start，end')
+        type='string', help='实验组peaks文件，头三列需分别是peak的：染色体，start，end')
     p.add_option(
         '-c', '--ctrl', dest='ctrl', action='store',
-        type='string', help='   peaks  ，       peak ：   ，start，end')
+        type='string', help='对照组peaks文件，头三列需分别是peak的：染色体，start，end')
     p.add_option(
         '-o', '--outfile', dest='outfile', default='filtered_exp_nonoverlap_peaks_with_ctrl.txt', action='store',
         type='string', help='filtered_exp_nonoverlap_peaks_with_ctrl')
@@ -101,7 +101,7 @@ def configOpt():
 
 
 def listToString(x):
-    """
+    """获得完整的命令
     """
     rVal = ''
     for a in x:
@@ -182,7 +182,7 @@ logging.debug(sys.modules[__name__].__doc__)
 logging.debug('Program version: %s' % _version)
 logging.debug('Start the program with [%s]\n', listToString(sys.argv))
 startTime = datetime.datetime.now()
-logging.debug("   ：Program start at %s" % startTime)
+logging.debug("计时器：Program start at %s" % startTime)
 # -----------------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------------
@@ -278,9 +278,9 @@ if __name__ == '__main__':
 logging.debug("Program ended")
 currentTime = datetime.datetime.now()
 runningTime = (currentTime - startTime).seconds  # in seconds
-logging.debug("   ：Program start at %s" % startTime)
-logging.debug("   ：Program end at %s" % currentTime)
-logging.debug("   ：Program ran %.2d:%.2d:%.2d" % (runningTime / 3600, (runningTime % 3600) / 60, runningTime % 60))
+logging.debug("计时器：Program start at %s" % startTime)
+logging.debug("计时器：Program end at %s" % currentTime)
+logging.debug("计时器：Program ran %.2d:%.2d:%.2d" % (runningTime / 3600, (runningTime % 3600) / 60, runningTime % 60))
 # -----------------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------------
@@ -291,7 +291,7 @@ logging.debug("   ：Program ran %.2d:%.2d:%.2d" % (runningTime / 3600, (running
 if opt.email != "none":
     run_cmd = listToString(sys.argv)
     sendEmail(opt.email, str(startTime), str(currentTime), run_cmd, outPath)
-    logging.info("        %s" % opt.email)
+    logging.info("发送邮件通知到 %s" % opt.email)
 
 # -----------------------------------------------------------------------------------
 

@@ -116,7 +116,7 @@ class Config:
                     self.sample[samplename]['end1'] = info[1]
                     self.sample[samplename]['single'] = info[1]
                 else:
-                    raise Exception(samplename + "    fq  ")
+                    raise Exception(samplename + "没有指定fq文件")
 
                 if len(info) >= 3 and info[2] != "":
                     if not (info[2].startswith('/') or info[2].startswith('~')):
@@ -239,7 +239,7 @@ class Config:
 
 class Genome:
     """
-    Genome
+    Genome处理类
     """
 
     def __init__(self, genomedb=None):

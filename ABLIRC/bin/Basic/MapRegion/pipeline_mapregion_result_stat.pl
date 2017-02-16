@@ -33,7 +33,7 @@ if(!defined($opts{i}) || !defined($opts{p}) || !defined($opts{o}) )
 
     -p        postfix                     must be given
 
-    -m        match                              ，default is "_Mapping_distribution.txt"
+    -m        match                       待统计文件后缀，default is "_Mapping_distribution.txt"
 
     -o        outfile                     must be given
 

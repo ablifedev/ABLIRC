@@ -21,10 +21,10 @@
 #####################################################################################
 
 """
-      ：
-1.   peak summits          TSS   ，       （   10000）。
-2.         peak
-3.
+程序功能说明：
+1. 计算peak summits一定范围内距离最近的TSS的距离，范围设置为参数（默认为10000）。
+2.记录不同距离长度的peak数
+3.做成折线图
 """
 
 
@@ -113,7 +113,7 @@ def configOpt():
 
 
 def listToString(x):
-    """
+    """获得完整的命令
     """
     rVal = ''
     for a in x:
@@ -214,7 +214,7 @@ logging.debug(sys.modules[__name__].__doc__)
 logging.debug('Program version: %s' % _version)
 logging.debug('Start the program with [%s]\n', listToString(sys.argv))
 startTime = datetime.datetime.now()
-logging.debug("   ：Program start at %s" % startTime)
+logging.debug("计时器：Program start at %s" % startTime)
 
 
 # -----------------------------------------------------------------------------------
@@ -327,9 +327,9 @@ if not opt.keepTemp:
 logging.debug("Program ended")
 currentTime = datetime.datetime.now()
 runningTime = (currentTime - startTime).seconds  # in seconds
-logging.debug("   ：Program start at %s" % startTime)
-logging.debug("   ：Program end at %s" % currentTime)
-logging.debug("   ：Program ran %.2d:%.2d:%.2d" % (
+logging.debug("计时器：Program start at %s" % startTime)
+logging.debug("计时器：Program end at %s" % currentTime)
+logging.debug("计时器：Program ran %.2d:%.2d:%.2d" % (
     runningTime / 3600, (runningTime % 3600) / 60, runningTime % 60))
 # -----------------------------------------------------------------------------------
 
@@ -341,7 +341,7 @@ logging.debug("   ：Program ran %.2d:%.2d:%.2d" % (
 if opt.email != "none":
     run_cmd = listToString(sys.argv)
     sendEmail(opt.email, str(startTime), str(currentTime), run_cmd, outPath)
-    logging.info("        %s" % opt.email)
+    logging.info("发送邮件通知到 %s" % opt.email)
 
 
 # -----------------------------------------------------------------------------------

@@ -162,7 +162,7 @@ outline: none !important;
 }
 
 .title1 {
-    font-family: Georgia,"lucida grande","lucida sans unicode","    ","  ",SimHei,Verdana;
+    font-family: Georgia,"lucida grande","lucida sans unicode","华文琥珀","黑体",SimHei,Verdana;
     font-size: 50px;
     line-height: 1.1;
     font-weight: 200;
@@ -171,7 +171,7 @@ outline: none !important;
 }
 
 .title2 {
-    font-family: "    ","Microsoft YaHei",SimHei,Verdana;
+    font-family: "华文细黑","Microsoft YaHei",SimHei,Verdana;
     font-size: 37px;
     line-height: 1.5;
     font-weight: 200;
@@ -180,7 +180,7 @@ outline: none !important;
 }
 
 .title3 {
-    font-family: "    ","Microsoft YaHei",SimHei,Verdana;
+    font-family: "华文细黑","Microsoft YaHei",SimHei,Verdana;
     font-size: 42px;
     line-height: 1.1;
     font-weight: bold;
@@ -189,7 +189,7 @@ outline: none !important;
 }
 
 .foot {
-    font-family: "    ","Microsoft YaHei",SimHei,Verdana;
+    font-family: "华文细黑","Microsoft YaHei",SimHei,Verdana;
     font-size: 28px;
     line-height: 1.1;
     font-weight: bold;
@@ -199,7 +199,7 @@ outline: none !important;
 
 .info {
     margin:80px 80px;
-    font-family: "    ","Microsoft YaHei",SimHei,Verdana;
+    font-family: "华文细黑","Microsoft YaHei",SimHei,Verdana;
     font-size: 27px;
     line-height: 1.8;
 }
@@ -219,7 +219,7 @@ span.info2 {
 }
 
 .timepoint p{
-    font-family: "    ","Microsoft YaHei",SimHei,Verdana;
+    font-family: "华文细黑","Microsoft YaHei",SimHei,Verdana;
     font-size: 23px;
     line-height: 1.2;
     margin-bottom:6px !important;
@@ -345,7 +345,7 @@ li#pageslide_1 {
 
 #pageslide_1_span {
     font-size: 20px;
-    font-family: "    ";
+    font-family: "微软雅黑";
 }
 
 #pageslide_1_switch {
@@ -420,7 +420,7 @@ padding:10px 0;
 
     .info {
     margin:40px 0;
-    font-family: "    ","Microsoft YaHei",SimHei,Verdana;
+    font-family: "华文细黑","Microsoft YaHei",SimHei,Verdana;
     font-size: 25px;
     line-height: 1.8;
 }

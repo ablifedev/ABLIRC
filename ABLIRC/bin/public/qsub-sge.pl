@@ -54,7 +54,7 @@ I advice you to always check the .error file after this program is finished. If 
 is good. Otherwise you should see what is the the problem and try to solve.
 
 For the resource requirement, by default, the --resource option is set to vf=1.9G, which means the total
-memory restriction of one job is 1.9G. By this way, you can throw 8 jobs in one computing node, becaee the
+memory restriction of one job is 1.9G. By this way, you can throw 8 jobs in one computing node, because the
 total memory restriction of one computing node is 15.5G. If your job exceeds the maximum memory allowed,
 then it will be killed forcely. For large jobs, you must specify the --resource option manually, which
 has the same format with "qsub -l" option. If you have many small jobs, and want them to run faster, you
@@ -487,8 +487,6 @@ sub queueJob{
 		$jobnum = @jobs-2;
 	}else{
 		my @jobs = split("\n", `ps aux | egrep " $work_shell_file_name\_[0-9]+.sh"`);
-		print @jobs;
-		print "aaaa\n";
 		$jobnum = scalar(@jobs);
 	}
 

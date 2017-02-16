@@ -1,0 +1,17 @@
+site_name: ABLIRC Docs
+
+# Repository
+repo_name: 'GitHub'
+repo_url: 'https://github.com/erhuoyi/ABLIRC'
+
+# Copyright
+copyright: 'Copyright &copy; 2017 ABLIFE'
+
+pages:
+    - Manual: index.md
+
+theme: 'material'
+extra:
+  palette:
+    primary: 'Blue Grey'
+    accent: 'Blue Grey'

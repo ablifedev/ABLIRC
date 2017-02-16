@@ -231,8 +231,7 @@ for(my $b=1;$b<=$batch_num;$b++){
 	}
 }
 
-#`perl /public/bin/qsub-sge.pl --queue all.q --resource vf=10.0G --maxproc 100 $SH`;
-`perl $Bin/../../../public/qsub-sge.pl --usesge $usesge --queue $queue --maxproc $cpu $SH`;
+`perl /public/bin/qsub-sge.pl --queue all.q --resource vf=10.0G --maxproc 100 $SH`;
 # `sh $SH > log`;
 
 sub load_kgXref{

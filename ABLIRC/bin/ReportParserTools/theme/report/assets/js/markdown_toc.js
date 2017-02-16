@@ -55,7 +55,7 @@ function factor(opts ,count,current) {
 
 ;(function($) {
 	/*
-	 *   header
+	 * 根据header创建目录内容
 	 */
 	function create_toc(opts) {
 		$(opts.documment_selector).find(':header').each(function() {
@@ -69,7 +69,7 @@ function factor(opts ,count,current) {
 	}
 
 	/*
-	 *   header
+	 * 渲染header
 	 */
 	function render_with_headers(opts) {
 		opts.render_before(opts);
@@ -77,7 +77,7 @@ function factor(opts ,count,current) {
 	}
 	
 	/*
-	 *   header
+	 * 渲染header
 	 */
 	function compile_headers(opts) {
 		var result = opts._header_nodes;
@@ -95,7 +95,7 @@ function factor(opts ,count,current) {
 
 
 	/*
-	 *    header  ，
+	 * 将已有header编号，并重命名
 	 */
 	function _rename_header_content(opts ,header_obj ,level) {
 		if(opts._headers.length == level) {
@@ -111,7 +111,7 @@ function factor(opts ,count,current) {
 		}
 
 		if(opts.is_auto_number == true) {
-			//           ，
+			//另存为的文件里会有编号，所以有编号的就不再重新替换
 			if($(header_obj).text().indexOf( opts._headers.join('.') ) != -1){
 
 			}else{
@@ -121,7 +121,7 @@ function factor(opts ,count,current) {
 	}
 	
 	/*
-	 * create table with head for anchor for example: <h2 id="#Linux  ">Linux  </h2>
+	 * create table with head for anchor for example: <h2 id="#Linux基础">Linux基础</h2>
 	 * this method can get a headable anchor
 	 * add by https://github.com/chanble
 	 */
@@ -133,19 +133,19 @@ function factor(opts ,count,current) {
 	}
 
 	/*
-	 *  ztree  header_nodes
+	 * 给ztree用的header_nodes增加数据
 	 */
 	function _add_header_node(opts ,header_obj, level, origin_title) {
 		var id  = encode_id_with_array(opts,opts._headers);//for ztree
 		var pid = get_parent_id_with_array(opts,opts._headers);//for ztree
-		var anchor = id;//use_head_anchor.html#
+		var anchor = id;//use_head_anchor.html#第二部分
 
-		//         anchor
+		// 默认使用标题作为anchor
 		if(opts.use_head_anchor == true){
 			anchor = _get_anchor_from_head(header_obj);
 		}
 		
-    //     id
+    // 设置锚点id
 		$(header_obj).attr('id',anchor);
 
 		log($(header_obj).text());
@@ -167,7 +167,7 @@ function factor(opts ,count,current) {
 	}
 
 	/*
-	 *           ，   ztree
+	 * 根据滚动确定当前位置，并更新ztree
 	 */
 	function bind_scroll_event_and_update_postion(opts) {
 		var timeout;
@@ -182,12 +182,12 @@ function factor(opts ,count,current) {
 				if(opts.debug) console.log('top='+top);
 
 				for (var i = 0, c = opts._header_offsets.length; i < c; i++) {
-					// fixed: top+5    ztree   ，
+					// fixed: top+5防止点击ztree的时候，出现向上抖动的情况
 					if (opts._header_offsets[i] >= (top + 5) ) {
 						console.log('opts._header_offsets['+ i +'] = '+opts._header_offsets[i]);
 						$('a').removeClass('curSelectedNode');
 
-						//    root  ，  i   1
+						// 由于有root节点，所以i应该从1开始
 				  		var obj = $('#tree_' + (i+1) + '_a').addClass('curSelectedNode');
 						break;
 					}
@@ -201,7 +201,7 @@ function factor(opts ,count,current) {
 	  }
 	}
 	/*
-	 *
+	 * 初始化中间件
 	 */
 	function init_with_middlewares(opts){
 		var middlewares = opts.middlewares;
@@ -211,14 +211,14 @@ function factor(opts ,count,current) {
 	}
 
 	/*
-	 *
+	 * 初始化
 	 */
 	function init_with_config(opts) {
 		opts.highlight_offset = $(opts.documment_selector).offset().top;
 	}
 
 	/*
-	 *
+	 * 日志
 	 */
 	function log(str) {
 		if($.fn.markdown_toc.defaults.debug == true) {
@@ -227,31 +227,31 @@ function factor(opts ,count,current) {
 	}
 
 	$.fn.markdown_toc = function(options) {
-		//  defaults   options      {}
+		// 将defaults 和 options 参数合并到{}
 		var opts = $.extend({},$.fn.markdown_toc.defaults,options);
 
 		return this.each(function() {
 			opts._zTree = $(this);
 
-			//
+			// 初始化
 			init_with_config(opts);
 			
-			//    middlewares
+			// 初始化middlewares
 			init_with_middlewares(opts);
 
-			//   table of content，     _headers
+			// 创建table of content，获取元数据_headers
 			create_toc(opts);
 
-			//   _headers  ztree
+			// 根据_headers生成ztree
 			render_with_headers(opts);
 
-			//           ，   ztree
+			// 根据滚动确定当前位置，并更新ztree
 		    // bind_scroll_event_and_update_postion(opts);
 		});
 		// each end
 	}
 
-	//
+	//定义默认
 	$.fn.markdown_toc.defaults = {
 		_zTree: null,
 		_headers: [],
@@ -259,17 +259,17 @@ function factor(opts ,count,current) {
 		_header_nodes: [{ id:1, pId:0, orderd_title:"Table of Content",open:true}],
 		debug: false,
 		/*
-		 *       anchor
-		 * create table with head for anchor for example: <h2 id="#Linux  ">Linux  </h2>
-		 *         ，       ，       ，
-		 *       false，
+		 * 使用标题作为anchor
+		 * create table with head for anchor for example: <h2 id="#Linux基础">Linux基础</h2>
+		 * 如果标题是唯一的，建议开启此选项，如果标题不唯一，还是使用数字吧
+		 * 此选项默认是false，不开启
 		 */
 		use_head_anchor: false,
     scroll_selector: 'window',
 		highlight_offset: 0,
 		highlight_on_scroll: true,
 		/*
-		 *              ，   50
+		 * 计算滚动判断当前位置的时间，默认是50毫秒
 		 */
 		refresh_scroll_time: 50,
 		documment_selector: 'body',
@@ -280,7 +280,7 @@ function factor(opts ,count,current) {
 			$(opts._zTree).html("<ul>" + compiled_html  +"</ul>");
 		},
 		/*
-		 *
+		 * 中间件
 		 */
 		middlewares:[
 			function(opts){
@@ -291,7 +291,7 @@ function factor(opts ,count,current) {
 			}
 		],
 		/**
-		{id: 2105 ,level:1,orderd_title: "21.5.       ",origin_title:"      ", open: true,  pId: 21 ,target: "_self", url: "#2105"}
+		{id: 2105 ,level:1,orderd_title: "21.5. 三部分的关系",origin_title:"三部分的关系", open: true,  pId: 21 ,target: "_self", url: "#2105"}
 	
 		function compile_headers_with_item(item) {
 			return "<li>" + item.name + "<li>"
@@ -301,19 +301,19 @@ function factor(opts ,count,current) {
 			return " <h"+item.level +"><a href='#" +item.id+ "'>" + item.orderd_title + "</a></h"+item.level +">"
 		},
 		/*
-		 * ztree   ，
+		 * ztree的位置，默认是在上部
 		 */
 		is_posion_top: true,
 		/*
-		 *       header
+		 * 默认是否显示header编号
 		 */
 		is_auto_number: false,
 		/*
-		 *
+		 * 默认是否展开全部
 		 */
 		is_expand_all: true,
 		/*
-		 *       ，
+		 * 是否对选中行，显示高亮效果
 		 */
 		is_highlight_selected_line: true,
 		step: 100 

@@ -73,7 +73,7 @@ sub Get_config {
 	open (T,"<$file") or warn "Can't open $file!\n";
 	while (<T>) {
 		chomp;
-		next if(/^\/\/\//);        #
+		next if(/^\/\/\//);        # 注释行
 		next if(/^\s*$/);
 		s/\r//g;		#chomp the \r character
 		if(/^\[\[ablife:config\]\]/){
@@ -103,8 +103,8 @@ sub Get_content {
 	my $start_flag = 0;
 	open (T,"<$file") or warn "Can't open $file!\n";
 	while (<T>) {
-		next if(/^\/\/\//);        #
-		s/\/\/\///g;         #
+		next if(/^\/\/\//);        # 注释行
+		s/\/\/\///g;         # 行内注释
 		# next if(/^\s*$/);
 		s/\r//g;		#chomp the \r character
 		if(/^\[\[ablife:$tag\]\]/){
@@ -134,14 +134,14 @@ sub main{
 	my @line = split(/\n/,$raw_content);
 	foreach my $eachline (@line){
 		# print $eachline,"\n";
-		next if $eachline=~/^\/\/\//;  #
+		next if $eachline=~/^\/\/\//;  #注释行
 		if($eachline=~/^\[ablife:(\w+)\](.*)/){
-			#      markdown   html    。
+			#将前面读取的markdown转换为html存储起来。
 			my $m = Text::Markdown->new;
     		my $temphtml = $m->markdown($temp);
     		$html .= $temphtml."\n";
     		$temp = "";
-    		#  tag  ，
+    		#读取tag信息，开始解析
     		my $tag = $1;
     		my $info = $2;
     		if($tag eq "newpage"){
@@ -239,7 +239,7 @@ sub showtable {
 		# print $_;
 		# $_=~s/(\([\d\.]+\%\))/\<br\>$1/g;
 		# $_=~s/(\([\d\.]+\%\))/\ $1/g;
-		$_=~s/(\([\d\.]+\%\))/\<br\>$1/g;   #20150722
+		$_=~s/(\([\d\.]+\%\))/\<br\>$1/g;   #20150722结题部要求只要遇到括号百分比则换行
 		push @rest,$_;
 	}
 	close IN;
@@ -671,7 +671,7 @@ HTML
 }
 
 
-sub AbsolutePath{	   #
+sub AbsolutePath{	   #获取指定目录或文件的决定路径
 	my ($type,$input) = @_;
 	my $return;
 	if ($type eq 'dir'){

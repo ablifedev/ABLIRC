@@ -21,10 +21,10 @@
 #####################################################################################
 
 """
-      ：
-1.clip-seq   ：         depht  cluster，    depth   cluster   。
-      ：
-  HTSeq
+程序功能说明：
+1.clip-seq第一步：将比对结果按照区域depht进行cluster，具有相同depth的区域cluster到一起。
+程序设计思路：
+利用HTSeq包
 """
 
 
@@ -88,7 +88,7 @@ def configOpt():
 
 
 def listToString(x):
-    """
+    """获得完整的命令
     """
     rVal = ''
     for a in x:
@@ -166,7 +166,7 @@ logging.debug(sys.modules[__name__].__doc__)
 logging.debug('Program version: %s' % _version)
 logging.debug('Start the program with [%s]\n', listToString(sys.argv))
 startTime = datetime.datetime.now()
-logging.debug("   ：Program start at %s" % startTime)
+logging.debug("计时器：Program start at %s" % startTime)
 
 
 # -----------------------------------------------------------------------------------
@@ -293,9 +293,9 @@ if __name__ == '__main__':
 logging.debug("Program ended")
 currentTime = datetime.datetime.now()
 runningTime = (currentTime - startTime).seconds  # in seconds
-logging.debug("   ：Program start at %s" % startTime)
-logging.debug("   ：Program end at %s" % currentTime)
-logging.debug("   ：Program ran %.2d:%.2d:%.2d" % (runningTime / 3600, (runningTime % 3600) / 60, runningTime % 60))
+logging.debug("计时器：Program start at %s" % startTime)
+logging.debug("计时器：Program end at %s" % currentTime)
+logging.debug("计时器：Program ran %.2d:%.2d:%.2d" % (runningTime / 3600, (runningTime % 3600) / 60, runningTime % 60))
 # -----------------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------------
@@ -306,7 +306,7 @@ logging.debug("   ：Program ran %.2d:%.2d:%.2d" % (runningTime / 3600, (running
 if opt.email != "none":
     run_cmd = listToString(sys.argv)
     sendEmail(opt.email, str(startTime), str(currentTime), run_cmd, outPath)
-    logging.info("        %s" % opt.email)
+    logging.info("发送邮件通知到 %s" % opt.email)
 
 
 # -----------------------------------------------------------------------------------

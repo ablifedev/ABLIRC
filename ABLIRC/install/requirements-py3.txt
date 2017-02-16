@@ -2,6 +2,7 @@
 # 2013-10-18 mbreese - Looks like it is okay now...
 # cython==0.16
 
+matplotlib
 pygraphviz
 colorama
 gffutils

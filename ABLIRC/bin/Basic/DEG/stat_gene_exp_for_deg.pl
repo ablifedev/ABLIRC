@@ -35,9 +35,9 @@ if(!defined($opts{exp}) || !defined($opts{t}))
 
 		-o                 outfile                   must be given
 
-		-tpm                   TPM,   RPKM
+		-tpm               表达量为TPM,默认为RPKM
 
-		-species             species，   gene
+		-species           统计species，默认为gene
 
 
 
@@ -126,10 +126,10 @@ if($symbol!=0){
 }
 
 if($opts{tpm} && $opts{species}){
-print OUT "\t\ta    species  <br>species     \tb TPM     1 species <br> TPM   0 species   \n";
+print OUT "\t\ta 表达的species数占<br>species总数的比例\tb TPM值大于等于1的species数<br>占TPM值大于0的species的比例\n";
 
 	}else{
-print OUT "\t\ta    gene     <br>    gene     \tb RPKM     1 gene <br> RPKM   0 gene   \n";
+print OUT "\t\ta 表达的gene数占总参考<br>基因组中gene总数的比例\tb RPKM值大于等于1的gene数<br>占RPKM值大于0的gene的比例\n";
 
 	}
 

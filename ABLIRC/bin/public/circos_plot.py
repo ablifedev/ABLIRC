@@ -21,7 +21,7 @@
 #####################################################################################
 
 """
-
+汇总有用的工具函数
 """
 
 
@@ -57,7 +57,7 @@ def configOpt():
     p.add_option('-l', '--chrlen', dest='chrlen', action='store', type='string', help='chromosome length file', metavar="FILE")
     p.add_option('-m', '--minchrlen', dest='minchrlen', action='store', default=1000000, type='int', help='min chromosome length to plot,default is 1000000', metavar="INT")
     p.add_option('-g', '--gff', dest='gff', action='store', type='string', help='gff file', metavar="FILE")
-    p.add_option('-u', '--chromosomesunits', dest='chromosomesunits', default=1, action='store', type='int', help='        ，   100000，          5000 ，              5000')
+    p.add_option('-u', '--chromosomesunits', dest='chromosomesunits', default=1, action='store', type='int', help='染色体坐标尺单位，默认为100000，需保证坐标单位不超过5000个，即基因组总长度除以该值应小于5000')
     p.add_option('-o', '--outfile', dest='outfile', default='reads_density_of_whole_genome_circos.png', action='store', type='string', help='output file', metavar="FILE")
     p.add_option('-d', '--circosconf', dest='circosconf', default='/users/ablife/RNA-Seq/Pipeline/Basic_Analysis_Pipeline/v2.0/circos_config/', action='store', type='string', help='circos conf template dir', metavar="DIR")
 
@@ -71,7 +71,7 @@ def configOpt():
 
 
 def listToString(x):
-    """
+    """获得完整的命令
     """
     rVal = ''
     for a in x:

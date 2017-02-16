@@ -1,0 +1,654 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="./assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
+    
+    
+      
+        <title>Manual - ABLIRC Docs</title>
+      
+    
+    
+      <script src="./assets/javascripts/modernizr-facb31f4a3.js"></script>
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="./assets/stylesheets/application-f3ab63f78a.css">
+      
+        <link rel="stylesheet" href="./assets/stylesheets/application-02ce7adcc2.palette.css">
+      
+      
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="blue-grey" data-md-color-accent="blue-grey">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="." title="ABLIRC Docs" class=" md-icon md-icon--home  md-header-nav__button">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Manual
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+              
+
+
+  
+
+
+  <a href="https://github.com/erhuoyi/ABLIRC" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+            
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <i class=" md-icon md-icon--home  md-nav__button">
+      
+    </i>
+    ABLIRC Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/erhuoyi/ABLIRC" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  <li class="md-nav__item">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Manual
+      </label>
+    
+    <a href="." title="Manual" class="md-nav__link md-nav__link--active">
+      Manual
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduce" title="Introduce" class="md-nav__link">
+    Introduce
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download" title="Download" class="md-nav__link">
+    Download
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-file-template" title="Config file template" class="md-nav__link">
+    Config file template
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduce" title="Introduce" class="md-nav__link">
+    Introduce
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download" title="Download" class="md-nav__link">
+    Download
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-file-template" title="Config file template" class="md-nav__link">
+    Config file template
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+                 <a href="https://github.com/erhuoyi/ABLIRC/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+               
+              
+                
+                  <h1>Manual</h1>
+                
+                <h2 id="introduce">Introduce</h2>
+<p>ABLIRC is a workflow for peak-calling and analyzing CLIP-seq sequencing datasets.</p>
+<h2 id="download">Download</h2>
+<p>Download current release: <a href="http://ablife.cc/ABLIRC/RELEASE/ABLIRC.tar.gz">ABLIRC-1.0.0</a></p>
+<p>Download example data:    <a href="http://ablife.cc/ABLIRC/RELEASE/ABLIRC-example-data.tar.gz">ABLIRC-example-data</a></p>
+<h2 id="installation">Installation</h2>
+<p>The program only works on linux platform, before the installation, both python2 and python3 are required, during the installation, the program will create a new virtual environment for python, and all the relevant toolkits will be installed in this virtual environment. Process will check the current environment to find the dependent packages, if not found, the pocess will install them by pip, CPAN automatically, so make sure your network connection activity. Besides, there are some repuired tools which need for manual installation, all the requirements are as followed:  </p>
+<p>Required software:</p>
+<ul>
+<li>
+<p>Perl (&gt;=5.10, https://www.perl.org/get.html)</p>
+</li>
+<li>
+<p>Python2 (&gt;=2.7, https://www.python.org/downloads/)</p>
+</li>
+<li>
+<p>Python3 (&gt;=3.3, https://www.python.org/downloads/)</p>
+</li>
+<li>
+<p>R (&gt;=3.2.0, https://cloud.r-project.org/)</p>
+</li>
+<li>
+<p>Samtools (&gt;=1.2, http://www.htslib.org/download/)</p>
+</li>
+<li>
+<p>bedtools (http://bedtools.readthedocs.io/en/latest/)</p>
+</li>
+<li>
+<p>Bowtie2 (&gt;=2.2.5, http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)</p>
+</li>
+<li>
+<p>TopHat2 (&gt;=2.0.13, http://ccb.jhu.edu/software/tophat/index.shtml)</p>
+</li>
+<li>
+<p>FASTX-Toolkit (&gt;=0.013, http://hannonlab.cshl.edu/fastx_toolkit/)</p>
+</li>
+</ul>
+<p>Required R packages:</p>
+<ul>
+<li>
+<p>ggplot2  </p>
+</li>
+<li>
+<p>reshape2  </p>
+</li>
+<li>
+<p>plotrix  </p>
+</li>
+<li>
+<p>methods  </p>
+</li>
+<li>
+<p>corrplot  </p>
+</li>
+<li>
+<p>RColorBrewer  </p>
+</li>
+<li>
+<p>Gtable  </p>
+</li>
+<li>
+<p>Grid  </p>
+</li>
+</ul>
+<p>After all of the requirments being installed, you can install the program as followed:   </p>
+<ol>
+<li>
+<p>Unzip the file <code>ABLIRC.tar.gz</code>: <br />
+<code>tar -zxf ABLIRC.tar.gz</code>   </p>
+</li>
+<li>
+<p>Writting the path of python2 and python3 to the python2_path file and python3_path file.<br />
+    a) Open the ABLIRC root folder: <br />
+<code>cd install/</code> <br />
+<code>vi python2_path</code><br />
+<code>vi python3_path</code>   </p>
+<p>b) Open the ABLIRC root folder: <br />
+<code>make</code>  </p>
+</li>
+</ol>
+<h2 id="usage">Usage</h2>
+<p>First time to run the program,you can by the fowlling steps:  </p>
+<ol>
+<li>
+<p>Step1:<br />
+cp the configuration file <code>clipseq.config.sample</code> to you workdir:<br />
+<code>cp clipseq.config.sample &lt;workdir&gt;</code>  </p>
+</li>
+<li>
+<p>Step2:<br />
+Fill in the configuration file correctly fill in the parameters according to the information in the configuration file, which parameter starts with a <code>*</code> is required , it means there is no default value with it ,you should fill it with you data information or chose correctly value according to you task, specific requirements will be detailed in the annotation. The other parameters are optional parameters, It is recommended to use the default value, all the required parameters are divided into the following parts:</p>
+<p>a) Select whether to use the sge cluster for the calculation, if sge is already installed on your platform, you could fill <code>usesge=yes</code>, and determine the number of nodes and CPUs used by sge. Else, the task will be running with multi-process at a single node. (reference parameters: usesge, cpu, sgequeue)<br />
+b) definitions about you clip data, fill in the folder where the full path, the name of each file and definite the corresponding sample name, make sure that each of you clipseq-data-file following the lines of SAMPLE. (reference parameters: indir, library-type,sample1,sample2...)<br />
+c) Modify the specific parameters of each module as needed. More details of the parameters, please refer to the comments in the config file.  </p>
+</li>
+<li>
+<p>Step3:<br />
+Run the ABLIRC : Make sure the <code>runPipe</code> in you path configure or you can use absolute path , then you can run the ABLIRC like this:<br />
+<code>runPipe -c clipseq_config.sample</code>  </p>
+</li>
+</ol>
+<h2 id="config-file-template">Config file template</h2>
+<p>You can copy and modify this config template.</p>
+<pre><code>#===================================================================#
+#================= Globle config and Genome config =================#
+#===================================================================#
+[gc]
+
+# Project infomation, for Report front cover
+Title = Clip-seq Analyze with ABLIRC
+Institutions = Example Lab
+Reportdate = 2015-5-20
+
+# If filled 'T', The program only generates commands , but the command is not executed,if filled 'F', the command will be executed immediately after generation.
+make-cmd-only = F
+
+# Genome ID used in the analysis, genomeinfo table should be filled. (genomeinfo.xls)
+GenomeID = human_gencode_v23
+
+# decide whether to use the sge server for qsub task delivery, if you have installed sge, fill 'yes', the task will be distributed to each node through the qsub, otherwise fill 'no', the task will be running with multi-threaded at a single node.
+usesge = yes
+
+# number of CPUs to use, if you choose to use sge, then the number of CPU is the maximum number of threads used.
+cpu = 16
+
+# The delivery node, it was needed if 'useage' is yes.
+sgequeue = new.q
+
+#======================================================#
+#================= Sample information =================#
+#======================================================#
+[sample]
+
+# fullname of the clipseq data input-dir-path.
+indir = /data12/dev/magl/updata_pipeline/ablifedev/clipseq/reads
+
+# choose whether the library was build on strand, fill 'strand' or 'unstrand'
+library-type = unstrand
+
+# name the each sample, the naming rules is 'sampleX = sample alias: sample file name'，you must list all you samples in the list, and specify an alias for each of them, all the alias must be different.
+SAMPLE1 = Eif3b_1:HEK293_Eif3b_1st.fq
+SAMPLE2 = Eif3b_2:HEK293_Eif3b_2nd.fq
+SAMPLE3 = IgG_1:HEK293_IgG_1st.fq
+SAMPLE4 = IgG_2:HEK293_IgG_2nd.fq
+
+# You must define the groups, normally, the sample and its control sample may be placed in a group. You can list all you samples with many groups, each group will be generated a result of callpeak.
+GROUP1 = Eif3b_1:IgG_1
+GROUP2 = Eif3b_2:IgG_2
+
+#======================================================#
+#======== Modules setting[module:modulename] ==========#
+#======================================================#
+# The following sections describe the parameter settings for each module
+
+
+
+# Clean the raw reads, Remove unqualified reads.
+[module:cleanreads]
+#The execution order of this module
+order = 1
+id = clean
+
+#whether skip the module,if is &quot;F&quot; , this module will be executed normal,if is &quot;T&quot;, this module will be skipped, even not make a commamd.
+skip = F
+o:cleanreads_dir
+o:rawstat
+
+# Select a part of the reads to test and evaluate the quality of the data.
+[module:testreads]
+order = 2
+id = statics
+skip = F
+cleanreads_dir = source|clean:cleanreads_dir
+rawstat = source|clean:rawstat
+o:statics_dir
+
+# Analysis of data quality statistics by fastqc.
+[module:fastqc]
+order = 2
+skip = F
+
+# Align sequence to the genome, The mapping tool used is Tophat2, you can set the parameters below.
+[module:mapping_tophat2]
+id = mapping__tophat2
+order = 2
+skip = F
+# most threads to use.
+threads = 5
+# Maximum number of mismatches.
+readmis = 2
+# Maximum number of mismatches to bowtie2.
+b2mis = 1
+# You can add any tophat or bowtie2 parameters on this line,they will be executed during the Tophat2 running.
+other_argv = -a 8 -m 0 -g 2 -p 12 --microexon-search --no-coverage-search --report-secondary-alignments
+
+# The definition of the output files, they are needed by the downstream modules. We recommend that you do not modify them.
+o:uniqbam
+o:mapresult
+
+# Convert the resulting bam file to a bed file, and remove the duplication results, the output will be used to callpeak.
+[module:bam2bed]
+id = mapping__bam2bed
+order = 3
+skip = F
+uniqbam = source|mapping__tophat2:uniqbam
+o:rmdup_uniq_bam
+o:rmdup_uniq_bed
+
+# Statistical information on the different regions of the gene annotation file.
+[module:gff]
+order = 3
+skip = F
+
+# According to the results of mapping, statistics the distribution of regions where reads aligned on the genome.
+[module:mapregion]
+id = basic__mapregion
+order = 3
+skip = F
+uniqbam = source|mapping__tophat2:uniqbam
+mapresult = source|mapping__tophat2:mapresult
+
+# According to the results of mapping, statistics the distribution of the distance between reads and TSS,TTS.
+[module:distance2xxx]
+id = basic__distance2xxx
+order = 3
+skip = F
+uniqbam = source|mapping__tophat2:uniqbam
+
+# According to the results of mapping, calulate the expression of each genes.
+[module:exp]
+id = basic__exp
+order = 3
+skip = F
+uniqbam = source|mapping__tophat2:uniqbam
+
+# The basic analysis of the clipseq, the correlation between the individual samples is calculated.
+[module:clip_basic]
+id = basic__clip_basic
+order = 4
+skip = F
+min_sum_rpkm = 0.3
+uniqbam = source|mapping__bam2bed:rmdup_uniq_bam
+#raw_pas_bam = source|filter_pas_reads:raw_pas_bam
+#o:pas_bam_discardip
+
+# This module is used to callpeak, make sure the module 'mapping_tophat2' has been runned and the output file 'rmdup_uniq_bed' and 'rmdup_uniq_bam' are exist. If you have listed your samples into groups previously, each group would be generated a result of callpeak. Besides, you can compare the difference of the callpeak result between two groups, you just need fill the parameter 'ablife_groupX', notice that the two group was connected with a ':', samples in each group was connected with a &quot;_vs_&quot;.
+[module:clip_callpeak_ablife]
+id = clip_callpeak__ablife
+order = 4
+skip = F
+
+uniqbed = source|mapping__bam2bed:rmdup_uniq_bed
+uniqbam = source|mapping__bam2bed:rmdup_uniq_bam
+o:peakfa
+o:peakinfo
+o:nonoverlap_peaks
+o:peakreads
+o:peaksense
+o:peakantisense
+
+
+# This module is used to statistics the result of callpeak. Calculate the sense and antisense peaks, compare overlap peaks between different groups.
+[module:clip_stat]
+id = clip_callpeak__stat
+order = 7
+skip = F
+uniqbam = source|mapping__bam2bed:rmdup_uniq_bam
+peakinfo1 = source|clip_callpeak__ablife:peakinfo
+peak_nonoverlap1 = source|clip_callpeak__ablife:nonoverlap_peaks
+peakreads1 = source|clip_callpeak__ablife:peakreads
+peaksense = source|clip_callpeak__ablife:peaksense
+peakantisense = source|clip_callpeak__ablife:peakantisense
+
+# Find the motif sequences according to the callpeak result.
+[module:clip_findmotifs]
+id = clip_callpeak__findmotifs
+order = 7
+skip = F
+peakfa_ablife = source|clip_callpeak__ablife:peakfa
+
+# Plot a diagram by circos, which showing the distribution of the peaks on the genome. 
+[module:clip_plot]
+id = clip_plot
+order = 8
+skip = F
+uniqbam = source|mapping__bam2bed:rmdup_uniq_bam
+peakinfo1 = source|clip_callpeak__ablife:peakinfo
+
+# Generate a report of the result.
+[module:clip_report]
+id = report
+order = 9
+skip = F
+Template = CLIP-seq.template
+Clean_INFO = clean_info.txt
+Sample_INFO = sample_info.txt
+
+# Appendix.
+Sup0 = Reference_genome
+Sup1 = Library
+Sup2 = Quality_control
+Sup3 = Mapping
+Sup4 = Correlation
+Sup5 = Peak_and_peak_gene
+Sup6 = Motif_results
+Sup7 = Peak_gene_function
+
+</code></pre>
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 ABLIFE
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="./assets/javascripts/application-2afe21e0b2.js"></script>
+      <script>var config={url:{base:"."}},app=new Application(config);app.initialize()</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
