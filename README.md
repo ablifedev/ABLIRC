@@ -8,7 +8,7 @@ Website： https://ablifedev.github.io/ABLIRC/
 
 Download current release: [ABLIRC-v0.1](https://github.com/ablifedev/ABLIRC/archive/v0.1.tar.gz)
 
-Download example data:    [ABLIRC-example-data](http://ablife.cc/ABLIRC/RELEASE/ABLIRC-example-data.tar.gz)
+Download example data:    [ABLIRC-example-data](https://github.com/ablifedev/ABLIRC-example-data)
 
 ## Installation
 
