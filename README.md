@@ -14,6 +14,10 @@ Download example data:    [ABLIRC-example-data](https://github.com/ablifedev/ABL
 
 The program only works on linux platform, before the installation, both python2 and python3 are required, during the installation, the program will create a new virtual environment for python, and all the relevant toolkits will be installed in this virtual environment. Process will check the current environment to find the dependent packages, if not found, the pocess will install them by pip, CPAN automatically, so make sure your network connection activity. Besides, there are some repuired tools which need for manual installation, all the requirements are as followed:  
 
+OS Requirements
+This package is supported for *Linux*. The package has been tested on the following systems:
++ Linux: Centos 6.5
+
 Required software:
 
 * Perl (>=5.10, https://www.perl.org/get.html)
@@ -77,6 +81,10 @@ After all of the requirments being installed, you can install the program as fol
 
 	b) Open the ABLIRC root folder:   
 		`make`  
+
+Install time: <10 minutes
+
+
 
 ## Usage
 
@@ -331,5 +339,39 @@ Sup4 = Correlation
 Sup5 = Peak_and_peak_gene
 Sup6 = Motif_results
 Sup7 = Peak_gene_function
+
+```
+
+## Running time
+
+<1hour in 16 cores computer
+
+## Outputs
+
+Results dir tree：
+
+```
+
+├── basic
+├── fastqc
+├── mapping
+├── callpeak
+├── plot
+├── report
+
+```
+
+Report Supplements dir tree：
+
+```
+
+├── Sup0_Reference_genome
+├── Sup1_Library
+├── Sup2_Quality_control
+├── Sup3_Mapping
+├── Sup4_Correlation
+├── Sup5_Peak_and_peak_gene
+├── Sup6_Motif_results
+└── Sup7_Peak_gene_function
 
 ```
